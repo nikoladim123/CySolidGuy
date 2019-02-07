@@ -166,9 +166,13 @@ video{
 }
 .burgerMenu{
   width: 5vw;
+  margin-top: 0.25vw;
   margin-left: 2.5vw;
   margin-right: 4.888vw;
   /* height: 2vw; */
+}
+.burgerMenu:hover{
+  cursor: pointer;
 }
 .burgerLine{
   transition: 0.4s;
@@ -520,8 +524,11 @@ display: block;
 }
 
 .contentFour .fa-phone{
-  font-size: 1.5vw;
+  font-size: 1.35vw;
   margin-right: 0.7vw;
+}
+.contentFour .fa-skype::before{
+  font-size: 1.7vw;
 }
 .contentFour a{
   text-decoration: none;
@@ -565,6 +572,7 @@ display: block;
   margin-left: 0;
 }
 .contentFour input,.contentFour textarea{
+  font-family: 'Montserrat-Light';
   outline: none;
   height: 1.5vw;
   background-color: rgb(237,234,231);
