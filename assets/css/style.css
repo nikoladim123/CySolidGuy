@@ -136,7 +136,8 @@ video{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgb(0,0,0,0.9);
+  background-color:#ff0000;
+  opacity: 0.85;
 }
 
 .logo{
@@ -249,13 +250,13 @@ main{
   height: 100%
 }
 .narrowBG{
-  height: 100vw;
-  width: 50vw;
+  height: 133vw;
+  width: 56vw;
   position: absolute;
   background-color: rgb(243,37,37);
   transform: rotate(18deg);
   top: -15vw;
-  left: -14vw;
+  left: -25vw;
 }
 
 .webDevelopment{
