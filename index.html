@@ -25,7 +25,19 @@
       <video autoplay muted loop id="myVideo">
         <source id='video' src="assets/video/Help.mp4" type="video/mp4" >
       </video>
-      <img class="logo" src="assets/img/png/Logo.png" alt="">
+      <div class="blackVideoOverlay"></div>
+      <a href="#"><img class="logo" src="assets/img/png/Logo.png" alt=""></a>
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Client Feedback</a>
+        <a href="#">Photography</a>
+        <div class="burgerMenu">
+          <div class="burgerLine"></div>
+          <div class="burgerLine"></div>
+          <div class="burgerLine"></div>
+        </div>
+      </div>
       <p class="highPerformance">High Performance,Low Cost</p>
     </header>
 
@@ -37,8 +49,12 @@
         <a href="#"> Design </a>
       </div>
     </div>
+
     <main>
-      <div class="narrowBG"></div>
+      <div class="narrowWrapper">
+        <div class="narrowBG"></div>
+      </div>
+
       <div class="webDevelopment">
         <p class="headingTop">WEB</p>
         <p class="headingBot">DEVELOPMENT</p>
@@ -181,7 +197,7 @@
                 <div class="uploadButton">
                   <p><i class="fa fa-upload" aria-hidden="true"></i> &nbsp Upload File</p>
                 </div>
-                <button class="SendBUtton" type="submit" name="button">Send</button>
+                <button class="SendBUtton" type="submit" name="button">SEND</button>
               </form>
             </div>
 
@@ -199,11 +215,11 @@
           </div>
           <div class="appMenuOptionsDiv">
             <div class="speedIcon"></div>
-            <p class="speedText">Speed</p>
+            <p class="speedText">Performance</p>
           </div>
           <div class="appMenuOptionsDiv">
             <div class="contactIcon"></div>
-            <p class="contactText">Contact</p>
+            <p class="contactText">Contact Us</p>
           </div>
 
           <div class="socialMedia">
@@ -216,6 +232,7 @@
 
         </div>
       </div>
+      <div class="spacer" style="clear: both;"></div>
     </main>
 
     <script type="text/javascript" src="assets/js/app.js"></script>

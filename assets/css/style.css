@@ -132,6 +132,12 @@ video{
   height: 100%;
   background-size: 100% 100%;
 }
+.blackVideoOverlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0,0.9);
+}
 
 .logo{
   position: absolute;
@@ -139,6 +145,39 @@ video{
   height: 3.925vw;
   margin-top: 1.703vw;
   margin-left: 4.888vw;
+}
+.links{
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  margin-top: 2.2vw;
+}
+.links a{
+  transition: 0.4s;
+  font-family: 'Montserrat-Light';
+  color: white;
+  font-size: 1.171vw;
+  text-decoration:none;
+  padding: 5px 10px;
+}
+.links a:hover{
+  color: rgb(253,216,47);
+}
+.burgerMenu{
+  width: 5vw;
+  margin-left: 2.5vw;
+  margin-right: 4.888vw;
+  /* height: 2vw; */
+}
+.burgerLine{
+  transition: 0.4s;
+  left: 0;
+  position: relative;
+  background-color: white;
+  height: 2px ;
+  width: 100%;
+  margin-bottom: 0.6vw;
 }
 
 .highPerformance{
@@ -188,10 +227,22 @@ video{
 }
 /* main */
 main{
+  padding-top: 0.1px;
+  top: 0;
   position: relative;
-  overflow: hidden;
-  height: 80.07vw;
+  overflow: visible;
+  /* min-height: 80.07vw; */
+  height: auto;
   background-color: rgb(17,17,17);
+}
+.narrowWrapper{
+  position: absolute;
+  top: 0
+  left:0;
+  /* border: 1px solid red; */
+  width: 100%;
+  overflow:hidden;
+  height: 100%
 }
 .narrowBG{
   height: 100vw;
@@ -221,28 +272,31 @@ main{
   font-family: 'Montserrat-Black';
 }
 .contentBox{
-  position: absolute;
+  position: relative;
+  float: right;
   width: 92.592vw;
-  height: 65.925vw;
+  /* min-height: 65.925vw; */
   background: white;
-  right: 0;
-  bottom: 0;
+  /* right: 0; */
+  /* left: 4.4vw; */
+  margin-top: 14vw;
   border-left: 2.296vw solid rgba(255, 255, 255, 0.3);
   border-top: 2px solid rgba(255, 255, 255, 0.3);
   background-clip: padding-box;
 }
 .content{
   /* border: 1px solid black; */
-  position: absolute;
+  padding-bottom: 4vw;
+  position: relative;
   left: 0;
   top: 0;
   background-color: rgb(237,234,231);
   width: 90.37vw;
-  height: 100%;
+  /* height: 100%; */
 }
 .contentImgTextBigBox{
-  overflow-y: scroll;
-  height: 54.07vw;
+  /* overflow-y: scroll; */
+  min-height: 40.07vw;
   /* border: 1px solid green; */
   position: relative;
   left: 3.333vw;
@@ -250,7 +304,7 @@ main{
   width: 64.814vw;
 }
 .imgText{
-  margin-bottom: 1vw;
+  margin-bottom: 4vw;
   display: flex;
 }
 .screen{
@@ -310,6 +364,7 @@ main{
 }
 .appMenu>div:nth-child(1){
   border-top: none;
+  background-color: rgb(243,37,37);
 }
 .socialMedia{
   margin-top: 3.5vw;
@@ -449,15 +504,15 @@ main{
 
 /* content of app menu */
 .contentOne{
-display: none;
+display: block;
 }
-.contentTwo,.contentThree{
+.contentTwo,.contentThree,.contentFour{
   display: none;
 }
 /* content contact two */
 .contentTwo .screen,.contentThree .screen{
-  width:20vw;
-  height: 20vw;
+  width:24vw;
+  height: 24vw;
 }
 /* content contact four */
 .contentFour{
@@ -474,7 +529,7 @@ display: none;
 .contentFour p{
   font-family: 'Montserrat-Light';
   margin: 0;
-  font-size: 1.185vw;
+  font-size: 18px;
   color: rgb(112,112,112);
 }
 .contactPhone{
@@ -510,12 +565,13 @@ display: none;
   margin-left: 0;
 }
 .contentFour input,.contentFour textarea{
+  outline: none;
   height: 1.5vw;
   background-color: rgb(237,234,231);
   border: none;
   border-bottom: 1px solid #888;
   width: 96%;
-  font-size: 1.1vw;
+  font-size: 18px;
   margin-bottom: 1.5vw;
 }
 .contentFour textarea:focus{
@@ -543,7 +599,7 @@ display: none;
   background-color: #888;
   border:2px solid #fff;
   color:white;
-  font-size: 1.4vw;
+  font-size: 1.464vw;
 }
 .SendBUtton:hover{
   cursor: pointer;

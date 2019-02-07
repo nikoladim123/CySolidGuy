@@ -1,3 +1,46 @@
+window.onscroll = function(){
+  console.log(appMenu.getBoundingClientRect().top);
+  appMenuSticky();
+}
+
+// burger menu hover anim
+// burger menu hover anim
+// burger menu hover anim
+var burgerMenu = document.getElementsByClassName('burgerMenu')[0];
+var burgerLine = document.getElementsByClassName('burgerLine');
+burgerMenu.addEventListener('mouseenter',()=>{
+  burgerLine[0].style.left = '-0.5vw';
+  burgerLine[1].style.left = '0.5vw';
+  burgerLine[2].style.left = '-0.5vw';
+  burgerLine[0].style.backgroundColor = 'rgb(253,216,47)';
+  burgerLine[1].style.backgroundColor = 'rgb(253,216,47)';
+  burgerLine[2].style.backgroundColor = 'rgb(253,216,47)';
+});
+
+burgerMenu.addEventListener('mouseleave',()=>{
+  burgerLine[0].style.left = '0vw';
+  burgerLine[1].style.left = '0vw';
+  burgerLine[2].style.left = '0vw';
+  burgerLine[0].style.backgroundColor = 'white';
+  burgerLine[1].style.backgroundColor = 'white';
+  burgerLine[2].style.backgroundColor = 'white';
+});
+// .appMenu STICKY ON / OFF
+// .appMenu STICKY ON / OFF
+// .appMenu STICKY ON / OFF
+var appMenu = document.getElementsByClassName('appMenu')[0];
+var content = document.getElementsByClassName('content')[0];
+function appMenuSticky(){
+  if(content.getBoundingClientRect().top <= 0){
+    console.log('zxczxc');
+    appMenu.style.position = 'fixed';
+  }
+  if(content.getBoundingClientRect().top > 1){
+    appMenu.style.position = 'absolute';
+    console.log('im absolute');
+  }
+}
+
 //Dev Anim
 var devIcon = document.getElementsByClassName('devIcon')[0];
 var devText = document.getElementsByClassName('devText')[0];
@@ -97,7 +140,7 @@ appMenuOptionsDiv[2].addEventListener('click',function(){
   contentTwo.style.display = 'none';
   contentThree.style.display = 'block';
   contentFour.style.display = 'none';
-  headingTop.innerHTML = 'SPEED';
+  headingTop.innerHTML = 'PERFORMANCE';
   headingBot.innerHTML = 'OPTIMIZATION';
 });
 
