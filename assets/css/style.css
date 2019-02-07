@@ -572,6 +572,7 @@ display: block;
   margin-left: 0;
 }
 .contentFour input,.contentFour textarea{
+  transition: 0.4s;
   font-family: 'Montserrat-Light';
   outline: none;
   height: 1.5vw;
