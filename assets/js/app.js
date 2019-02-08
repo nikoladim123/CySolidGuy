@@ -11,7 +11,7 @@ var highPerformance = document.getElementsByClassName('highPerformance')[0];
 var blackBand = document.getElementsByClassName('blackBand')[0];
 var main = document.getElementsByClassName('main')[0];
 function changeColorOnScroll(){
-  if(highPerformance.getBoundingClientRect().top < 0){
+  if(scrollY > 2){
     blackBand.style.backgroundColor = 'black';
     main.style.backgroundColor = 'black';
   }
