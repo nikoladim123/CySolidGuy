@@ -206,7 +206,7 @@ video{
 /* black band */
 .blackBand{
   transition: 1s;
-  background-color: #444444 ;
+  background-color: #555555 ;
   position: relative;
   height: 9.629vw;
   /* border-bottom: 1px solid rgb(0,0,0,0.2); */
@@ -251,7 +251,7 @@ main{
   overflow: visible;
   /* min-height: 80.07vw; */
   height: auto;
-  background-color: #444444 ;
+  background-color: #555555 ;
 }
 .narrowWrapper{
   position: absolute;
