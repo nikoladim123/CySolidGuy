@@ -1,8 +1,21 @@
 window.onscroll = function(){
-  console.log(appMenu.getBoundingClientRect().top);
+  // console.log(appMenu.getBoundingClientRect().top);
   appMenuSticky();
+  changeColorOnScroll()
 }
 
+// change color main/search bg
+// change color main/search bg
+// change color main/search bg
+var highPerformance = document.getElementsByClassName('highPerformance')[0];
+var blackBand = document.getElementsByClassName('blackBand')[0];
+var main = document.getElementsByClassName('main')[0];
+function changeColorOnScroll(){
+  if(highPerformance.getBoundingClientRect().top < 0){
+    blackBand.style.backgroundColor = 'black';
+    main.style.backgroundColor = 'black';
+  }
+}
 // burger menu hover anim
 // burger menu hover anim
 // burger menu hover anim
@@ -157,25 +170,25 @@ appMenuOptionsDiv[3].addEventListener('click',function(){
 // appmenu on click goes gray
 // appmenu on click goes gray
 appMenuOptionsDiv[0].addEventListener('click',function(){
-  appMenuOptionsDiv[0].style.background = "rgb(243,37,37)";
+  appMenuOptionsDiv[0].style.background = "rgb(212,51,43)";
   appMenuOptionsDiv[1].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[2].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[3].style.background = "rgb(17,17,17)";
 });
 appMenuOptionsDiv[1].addEventListener('click',function(){
-  appMenuOptionsDiv[1].style.background = "rgb(243,37,37)";
+  appMenuOptionsDiv[1].style.background = "rgb(212,51,43)";
   appMenuOptionsDiv[0].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[2].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[3].style.background = "rgb(17,17,17)";
 });
 appMenuOptionsDiv[2].addEventListener('click',function(){
-  appMenuOptionsDiv[2].style.background = "rgb(243,37,37)";
+  appMenuOptionsDiv[2].style.background = "rgb(212,51,43)";
   appMenuOptionsDiv[1].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[0].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[3].style.background = "rgb(17,17,17)";
 });
 appMenuOptionsDiv[3].addEventListener('click',function(){
-  appMenuOptionsDiv[3].style.background = "rgb(243,37,37)";
+  appMenuOptionsDiv[3].style.background = "rgb(212,51,43)";
   appMenuOptionsDiv[1].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[2].style.background = "rgb(17,17,17)";
   appMenuOptionsDiv[0].style.background = "rgb(17,17,17)";
