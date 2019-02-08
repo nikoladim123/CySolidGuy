@@ -1,8 +1,19 @@
 window.onscroll = function(){
   // console.log(appMenu.getBoundingClientRect().top);
   appMenuSticky();
-  changeColorOnScroll()
+  changeColorOnScroll();
+  if(scrollY >100){
+    imageReveal();
+    textReveal();
+  }
 }
+
+window.onload = function(){
+  revealOnLoad();
+}
+
+
+
 
 // change color main/search bg
 // change color main/search bg
@@ -135,8 +146,12 @@ appMenuOptionsDiv[0].addEventListener('click',function(){
   contentTwo.style.display = 'none';
   contentThree.style.display = 'none';
   contentFour.style.display = 'none';
-  headingTop.innerHTML = 'WEB';
-  headingBot.innerHTML = 'DEVELOPMENT';
+  // resetReavealForClick();
+  revealOnSelect();
+  setTimeout(function(){
+    headingTop.innerHTML = 'WEB';
+    headingBot.innerHTML = 'DEVELOPMENT';
+  },500);
 });
 
 appMenuOptionsDiv[1].addEventListener('click',function(){
@@ -144,8 +159,12 @@ appMenuOptionsDiv[1].addEventListener('click',function(){
   contentTwo.style.display = 'block';
   contentThree.style.display = 'none';
   contentFour.style.display = 'none';
-  headingTop.innerHTML = 'CMS';
-  headingBot.innerHTML = 'DEVELOPMENT';
+  // resetReavealForClick();
+  revealOnSelect();
+  setTimeout(function(){
+    headingTop.innerHTML = 'CMS';
+    headingBot.innerHTML = 'DEVELOPMENT';
+  },500);
 });
 
 appMenuOptionsDiv[2].addEventListener('click',function(){
@@ -153,8 +172,12 @@ appMenuOptionsDiv[2].addEventListener('click',function(){
   contentTwo.style.display = 'none';
   contentThree.style.display = 'block';
   contentFour.style.display = 'none';
-  headingTop.innerHTML = 'PERFORMANCE';
-  headingBot.innerHTML = 'OPTIMIZATION';
+  // resetReavealForClick();
+  revealOnSelect();
+  setTimeout(function(){
+    headingTop.innerHTML = 'PERFORMANCE';
+    headingBot.innerHTML = 'OPTIMIZATION';
+  },500);
 });
 
 appMenuOptionsDiv[3].addEventListener('click',function(){
@@ -162,9 +185,69 @@ appMenuOptionsDiv[3].addEventListener('click',function(){
   contentTwo.style.display = 'none';
   contentThree.style.display = 'none';
   contentFour.style.display = 'block';
-  headingTop.innerHTML = '&nbsp';
-  headingBot.innerHTML = 'CONTACT US';
+  // resetReavealForClick();
+  revealOnSelect();
+  setTimeout(function(){
+    headingTop.innerHTML = '&nbsp';
+    headingBot.innerHTML = 'CONTACT US';
+  },500);
 });
+
+// animated Heading reveal
+// animated Heading reveal
+// animated Heading reveal
+var animatedHeading = document.getElementsByClassName('animatedHeading')[0];
+
+function revealOnLoad(){
+  animatedHeading.style.height = '0%';
+}
+
+function revealOnSelect(){
+  animatedHeading.style.transition = '0s';
+  animatedHeading.style.top = '0%';
+  setTimeout(function(){
+  animatedHeading.style.transition = '0.5s';
+  animatedHeading.style.height = '100%';
+  animatedHeading.style.top = '0%';
+    setTimeout(function(){
+      animatedHeading.style.height = '0%';
+      animatedHeading.style.top = '100%';
+    },500);
+  },5);
+}
+
+// reveal anim Images Text
+// reveal anim Images Text
+// reveal anim Images Text
+var screenVar = document.getElementsByClassName('screen');
+var text = document.getElementsByClassName('text');
+var images = document.getElementsByClassName('images');
+
+// function screenReveal(){
+//   for (var i = 0; i < screenVar.length; i++) {
+//     screenVar[i].style.right = '0';
+//   }
+// }
+
+function textReveal(){
+  for (var i = 0; i < text.length; i++) {
+    if(text[i].childNodes[1].getBoundingClientRect().top < (window.innerHeight / 100) *95){
+      text[i].style.left = '0';
+    }
+    // text[i].style.left = '0';
+  }
+}
+
+function imageReveal(){
+  setTimeout(function(){
+    for (var i = 0; i < images.length; i++) {
+      if(images[i].childNodes[1].getBoundingClientRect().top < (window.innerHeight / 100) *95){
+        images[i].childNodes[1].style.right = '0vw';
+      }
+      // images[i].childNodes[1].style.right = '0vw';
+    }
+  },500)
+}
 
 // appmenu on click goes gray
 // appmenu on click goes gray

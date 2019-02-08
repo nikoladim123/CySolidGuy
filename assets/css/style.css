@@ -280,8 +280,17 @@ main{
   background-color: rgb(212,51,43);
 }
 
+.animatedHeading{
+  transition: 0.5s;
+  background-color: rgb(212,51,43);
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .webDevelopment{
-  top: 4.5vw;
+  top: 4vw;
   left: 5.5vw;
   position: absolute;
 }
@@ -334,22 +343,37 @@ main{
   margin-bottom: 4vw;
   display: flex;
 }
+
 .screen{
+  transition: 2s;
   position: absolute;
-  right: 0;
+  right: -24vw;
   width: 24vw;
   height: 18.518vw;
 }
 .images{
+  transition: 2s;
+  overflow: hidden;
   min-width: 24vw;
   width: 24vw;
   position: relative;
 }
+
 .text{
+  position: relative;
+  left: -40vw;
+  transition: 2s;
+  overflow: hidden;
   color: rgb(112,112,112);
   text-align: justify;
   font-size: 1.185vw;
 }
+.textWraperAnimDiv{
+  overflow: hidden;
+  position: relative;
+}
+
+
 .text p{
   font-family: 'Montserrat-Light';
   margin-right: 2.962vw;
@@ -362,9 +386,10 @@ main{
   margin-bottom: 1vw;
 }
 .speedImg{
+  transition: 2s;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -8vw;
   width: 8vw;
   height: 8vw;
 }
